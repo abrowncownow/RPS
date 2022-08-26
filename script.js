@@ -8,7 +8,9 @@ choices = ["Rock", "Paper", "Scissors"]
 var playAgain = true;
 while (playAgain){
     var playerChoice = window.prompt("Choose R, P, or S", "R, P, S");
-    if ((playerChoice === "R") || (playerChoice === "P") || (playerChoice === "S")){
+    if (!(playerChoice === "R") || (playerChoice === "P") || (playerChoice === "S")){
+        window.alert("You entered an invalid choice. Try again!"); }
+    else if ((playerChoice === "R") || (playerChoice === "P") || (playerChoice === "S")){
         //translate choice into player value
         var playerValue;
         if (playerChoice === "R"){
@@ -19,7 +21,7 @@ while (playAgain){
             playerValue = "Scissors"}
         
         //Declare playerValue for debugging
-        //window.alert("You chose " + playerValue + "!"); 
+        window.alert("You chose " + playerValue + "!"); 
         //computer's move
         var computerChoice = Math.floor(Math.random()*3)        
         window.alert("The computer chose " + choices[computerChoice] + "!")
@@ -47,12 +49,9 @@ while (playAgain){
         "\nLosses: " + gameScore.losses +
         "\nTies: " + gameScore.ties)
 
-
         //Check if the player wants to play again
-        if (!window.confirm("Play again?")){
-            playAgain = false;
-        } else {}
-    }else{
-        window.alert("You entered an invalid choice. Try again!");
-    }
+        playAgain = window.confirm("Play again?");
+    }else{}
+
+   
 }
