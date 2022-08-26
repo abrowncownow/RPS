@@ -29,7 +29,7 @@ while (!playAgain===false){
 
         //determine outcome
         if (playerValue === computerValue){
-            windows.alert("It's a tie!");
+            window.alert("It's a tie!");
             gameScore.ties++;
         }
         //win conditions
