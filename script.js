@@ -14,11 +14,11 @@ while (playAgain){
         //translate choice into player value
         var playerValue;
         if (playerChoice === "R"){
-            playerValue = "Rock"
+            playerValue = "Rock";
         } else if (playerChoice === "P"){
-            playerValue = "Paper"
+            playerValue = "Paper";
         } else if (playerChoice ==="S"){
-            playerValue = "Scissors"}
+            playerValue = "Scissors";}
         
         //Declare playerValue for debugging
         window.alert("You chose " + playerValue + "!"); 
