@@ -50,7 +50,9 @@ while (playAgain){
         "\nTies: " + gameScore.ties)
 
         //Check if the player wants to play again
-        playAgain = window.confirm("Play again?");
+        function checkPlayAgain(){
+        playAgain = window.confirm("Play again?");}
+        checkPlayAgain();
     }else{}
 
    
